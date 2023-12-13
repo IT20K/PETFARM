@@ -1,3 +1,4 @@
+ const anhnen = "https://ik.imagekit.io/4chk4f1pbm/%E1%BA%A3nh%20file%20petshop/z4586019193437_e37442ca1d093c8fb9b720eb8047706d.jpg?updatedAt=1691490299938"
 export default function Carousel() {
     return (
         <>
@@ -27,7 +28,7 @@ export default function Carousel() {
 
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" className="d-block w-100" alt="Sunset Over the City" />
+                        <img src={anhnen} className="d-block w-100" alt="Sunset Over the City" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

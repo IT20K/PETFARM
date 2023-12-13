@@ -52,11 +52,11 @@ export default function Detail() {
                         </nav>
                         <div className="product_name">{products.productname}</div>
                         <div className="product-rating"><span className="badge badge-success"><i className="fa fa-star"></i> 4.5 Star</span> <span className="rating-review">35 Ratings &amp; 45 Reviews</span></div>
-                        <div> <span className="product_price" name="price">{products.currency}</span> <strike className="product_discount"> <span >₹ 2,000<span> </span></span></strike> </div>
-                        <div> <span className="product_saved">You Saved:</span> <span >₹ 2,000<span> </span></span></div>
-                        <div> <span className="product_info">EMI starts at ₹ 2,000. No Cost EMI Available<span><br /> <span className="product_info">Warranty: 6 months warranty<span><br /> <span className="product_info">7 Days easy return policy<span><br /> <span className="product_info">7 Days easy return policy<span><br /> <span className="product_info">In Stock: 25 units sold this week<span> </span></span></span></span></span></span></span></span></span></span></div>
+                        <div> <span className="product_price" name="price">{products.currency}</span> <strike className="product_discount"> <span >vnd<span> </span></span></strike> </div>
+                        <div> <span className="product_saved">You Saved:</span> <span >vnd<span> </span></span></div>
+                        <div> <span className="product_info">{products.brand}<span><br /> <span className="product_info">Warranty: Care support <span><br /> <span className="product_info">7 Days easy return policy<span><br /> <span className="product_info">7 Days easy return policy<span><br /> <span className="product_info">In Stock: 25 pieces<span> </span></span></span></span></span></span></span></span></span></span></div>
                         <div>
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="col-md-5">
                                     <div className="br-dashed">
                                         <div className="row">
@@ -68,11 +68,11 @@ export default function Detail() {
                                     </div>
                                 </div>
                                 <div className="col-md-7"> </div>
-                            </div>
-                            <div className="row">
+                            </div> */}
+                            {/* <div className="row">
                                 <div className="col-xs-6" > <span className="product_options">RAM Options</span><br /> <button className="btn btn-primary btn-sm">4 GB</button> <button className="btn btn-primary btn-sm">8 GB</button> <button className="btn btn-primary btn-sm">16 GB</button> </div>
                                 <div className="col-xs-6" > <span className="product_options">Storage Options</span><br /> <button className="btn btn-primary btn-sm">500 GB</button> <button className="btn btn-primary btn-sm">1 TB</button> </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="order_info d-flex flex-row">
                             <form action="#">

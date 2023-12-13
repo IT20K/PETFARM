@@ -5,6 +5,8 @@ import AxiosIDCart from './AxiosIDCart/AxiosIDCart'
 import AxiosOnDeleteAll from './AxiosOnDeleteAll/AxiosOnDeleteAll'
 import AxiosUpdateQuantity from './AxiosUpdateQuantity/AxiosUpdateQuantity'
 import { Link } from 'react-router-dom'
+import { PayPalButtons } from '@paypal/react-paypal-js'
+import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 export default function Cart() {
     // cart sản phẩm
     const [carts, setCart] = useState([])
@@ -73,26 +75,26 @@ export default function Cart() {
         parent.querySelector(".inputValue").value = value;
         AxiosUpdateQuantity(value, id)
     }
-    window.onload = ()=>{
-        Paypal.Buttons({
-            createOrder: function (data, actions) {
-                return actions.order.create({
-                    purchase_units: [
-                        {
-                            amount: {
-                                value: '0.01'
-                            }
-                        }
-                    ]
-                });
-            },
-            onApprove: function (data, actions) {
-                return actions.order.capture().then(function (details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name);
-                });
-            }
-        }).render('#paypal');
-    }
+    // window.onload = ()=>{
+    //     Paypal.Buttons({
+    //         createOrder: function (data, actions) {
+    //             return actions.order.create({
+    //                 purchase_units: [
+    //                     {
+    //                         amount: {
+    //                             value: '0.01'
+    //                         }
+    //                     }
+    //                 ]
+    //             });
+    //         },
+    //         onApprove: function (data, actions) {
+    //             return actions.order.capture().then(function (details) {
+    //                 alert('Transaction completed by ' + details.payer.name.given_name);
+    //             });
+    //         }
+    //     }).render('#paypal');
+    // }
     return (
         <>
             <section className="h-100 h-custom">
@@ -170,15 +172,15 @@ export default function Cart() {
                                             }}>
                                                 <button className='btn btn-danger' type='submit' onClick={OnDeleteAll} >DeleteAll</button>
                                             </form>
-
+                                            
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="card bg-secondary text-white rounded-3">
                                                 <div className="card-body">
-                                                    <div className="d-flex justify-content-between align-items-center mb-4">
+                                                    <div className="d-flex justify-content-between align-items-center mb-4 "style = {{width : "150px", height : "150px"}}>
                                                         <h5 className="mb-0">Card details</h5>
-                                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                                                            className="img-fluid rounded-3" alt="Avatar" />
+                                                        <img src="https://ik.imagekit.io/4chk4f1pbm/%E1%BA%A3nh%20file%20petshop/z4586019193437_e37442ca1d093c8fb9b720eb8047706d.jpg?updatedAt=1691490299938"
+                                                            className="img-fluid rounded-3 w-100 h-100" alt="Avatar" />
                                                     </div>
                                                     <p className="small mb-2">Card type</p>
                                                     <a href="#!" type="submit" className="text-white"><i
@@ -244,7 +246,7 @@ export default function Cart() {
                                                                 <Link to={'/payment'}> Checkout <i className="fas fa-long-arrow-alt-right ms-2"></i></Link>
                                                             </div>
                                                         </button> */}
-                                                        {/* <div className='row  mt-2'>
+                                                        <div className='row  mt-2'>
                                                             <div className='w-100 d-flex justify-content-center algin-content-center'>
                                                                 <PayPalScriptProvider options={{ 'AY94rKESY3SLKA_aQjLxufEfI47FhGqFrjig4dXWTzNZgLQSRSN-xWCEaUA9scm4nJZ_62FPRNWgIZI-': 'test', currency: 'USD' }}>
                                                                     <div id="paypal">
@@ -252,8 +254,8 @@ export default function Cart() {
                                                                     </div>
                                                                 </PayPalScriptProvider>
                                                             </div>
-                                                        </div> */}
-                                                        <div id='paypal'></div>
+                                                        </div>
+                                                        {/* <div id='paypal'></div> */}
                                                     </div>
 
 

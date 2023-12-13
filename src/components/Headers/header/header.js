@@ -29,18 +29,18 @@ export default function Header() {
                 <div className="container">
                     <a className="navbar-brand me-2" href="/">
                         <div className="d-flex">
-                                <h1 className="text-primary">A</h1>
-                                <h1 className="text-secondary">N</h1>
-                                <h1 className="text-success">D</h1>
-                                <h1 className="text-warning">R</h1>
-                                <h1 className="text-info">E</h1>
-                                <h1 className="text-secondary">W</h1>
-                                <h1 className="text-muted">-</h1>
-                                <h1 className="text-danger">S</h1>
-                                <h1 className="text-warning">T</h1>
-                                <h1 className="text-success">O</h1>
-                                <h1 className="text-primary">R</h1>
+                                <h1 className="text-primary">P</h1>
                                 <h1 className="text-secondary">E</h1>
+                                <h1 className="text-success">T</h1>
+                                <h1 className="text-warning">S</h1>
+                                <h1 className="text-info">H</h1>
+                                <h1 className="text-secondary">O</h1>
+                                <h1 className="text-muted">P</h1>
+                                <h1 className="text-danger">F</h1>
+                                <h1 className="text-warning">A</h1>
+                                <h1 className="text-success">R</h1>
+                                <h1 className="text-primary">M</h1>
+                               
 
                         </div>
 
